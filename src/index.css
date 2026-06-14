@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #4f2d35;
+  background: #fff8f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.soft-grid {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(247, 200, 208, 0.45), transparent 26rem),
+    radial-gradient(circle at 78% 8%, rgba(217, 208, 243, 0.5), transparent 22rem),
+    radial-gradient(circle at 50% 88%, rgba(185, 214, 196, 0.45), transparent 26rem),
+    linear-gradient(135deg, #fff8f1 0%, #fff1f4 48%, #f7f5ff 100%);
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 24px 80px rgba(111, 51, 69, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.section {
+  @apply mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16;
+}
+
+.pill {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/65 px-4 py-2 text-sm font-semibold text-berry shadow-sm;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rosewood;
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -1rem;
+  z-index: 80;
+  width: 0.7rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  pointer-events: none;
+}
