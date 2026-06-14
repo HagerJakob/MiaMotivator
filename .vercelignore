@@ -1,0 +1,17 @@
+node_modules
+dist
+vite.log
+
+src/gallery/*
+!src/gallery/Image010.jpg
+!src/gallery/IMG_0831.JPG
+!src/gallery/IMG_0832.JPG
+!src/gallery/IMG_2453.JPG
+!src/gallery/IMG_2700.JPG
+!src/gallery/IMG_7353.JPG
+!src/gallery/IMG_7385.JPG
+!src/gallery/IMG_7748.JPG
+!src/gallery/IMG_8113.JPG
+!src/gallery/IMG_8315.JPG
+!src/gallery/IMG_8583.JPG
+!src/gallery/IMG_8749.JPG
