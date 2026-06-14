@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Sparkles } from "lucide-react";
 
 const checks = [
-  "Ich kann mit einer Definition beginnen.",
+  "Ich kann mündlich mit einer Definition beginnen.",
   "Ich kenne Beispiele zu den wichtigsten Theorien.",
   "Ich darf kurz nachdenken, ohne panisch zu werden.",
   "Ich hole zuerst sichere Punkte.",

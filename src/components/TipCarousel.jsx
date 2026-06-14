@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Bookmark, BookmarkCheck, RefreshCcw } from "lucide-react";
 import { tipCategories, tips } from "../data/tips.js";
 
 const storageKey = "mia-motivator-favorites";
+const isEnglishTip = (tip) => tip.source?.toLowerCase().includes("englisch");
 
 export default function TipCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -16,7 +17,9 @@ export default function TipCarousel() {
   });
 
   const visibleTips = useMemo(() => {
-    if (category === "Alle") return tips;
+    if (category === "Alle") {
+      return [...tips].sort((a, b) => Number(isEnglishTip(a)) - Number(isEnglishTip(b)));
+    }
     return tips.filter((tip) => tip.category === category);
   }, [category]);
 
@@ -53,9 +56,9 @@ export default function TipCarousel() {
     <section id="tipps" className="section relative z-10">
       <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <span className="pill">Tipp-Karten aus den Unterlagen</span>
+          <span className="pill">P&P-Tipp-Karten aus den Unterlagen</span>
           <h2 className="mt-4 font-display text-4xl font-bold text-berry">
-            Kleine Hinweise, die sofort helfen
+            Psychologie & Philosophie zuerst
           </h2>
         </div>
         <div className="text-sm font-semibold text-berry/65">

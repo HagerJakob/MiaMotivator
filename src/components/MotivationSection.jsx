@@ -1,9 +1,11 @@
+import React from "react";
 import { HeartHandshake, Star } from "lucide-react";
 import { affirmations, lovingMessages } from "../data/tips.js";
+import MotivationPhotoCard from "./MotivationPhotoCard.jsx";
 
 export default function MotivationSection() {
   return (
-    <section className="section relative z-10">
+    <section id="motivation" className="section relative z-10">
       <div className="mb-8">
         <span className="pill">
           <HeartHandshake className="h-4 w-4" />
@@ -21,6 +23,10 @@ export default function MotivationSection() {
             <p className="text-lg leading-8 text-berry/78">{message}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-6">
+        <MotivationPhotoCard />
       </div>
 
       <div className="mt-8 rounded-[2rem] bg-berry p-6 text-white shadow-soft sm:p-8">
